@@ -1,0 +1,40 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+
+# debug logs
+npm-debug.log*
+
+# local env files
+.env*.local
+.env
+
+# deployment
+.vercel
+
+# OpenNext
+/.open-next
+
+# Local dev
+/.vscode
+
+# wrangler
+.wrangler
+.dev.vars*
+
+# custom
+/.cloudflared

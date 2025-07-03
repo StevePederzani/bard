@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+:root {
+  --font: 'Source Code Pro', monospace;
+  --font-size: 0.75rem;
+  --btn-padding: 1rem;
+  --btn-radius: 0.75rem;
+  --transition: background-color 0.3s ease;
+  --fg: var(--app-foreground);
+  --accent: #007bff;
+  --accent-hover: #0056b3;
+  --accent-active: #004085;
+  --perm: #2196f3;
+  --perm-hover: #1769aa;
+  --perm-active: #115293;
+  --start: #28c76f;
+  --start-hover: #22ab5e;
+  --start-active: #1d944e;
+  --stop: #ff5c5c;
+  --stop-hover: #e04646;
+  --stop-active: #c0392b;
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: none;
+  font: var(--font-size) var(--font);
+  color: var(--fg);
+}
+
+/* LAYOUT */
+.frame-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.frame {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  background: url('/assets/frame.svg') no-repeat center/cover;
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.content {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  width: min(
+    100vw,
+    calc(100vh * 1200 / 1920)
+  );
+  height: calc(60vh * 1920 / 1200);
+  transform: translate(-50%, -50%);
+  border-radius: 1.5rem;
+  overflow: auto;
+  z-index: 1;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 32px, black calc(100% - 32px), transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 32, black calc(100% - 32px), transparent);
+}
+
+.vibe-bg {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  width: min(
+    100vw,
+    calc(100vh * 1200 / 1920)
+  );
+  height: calc(2 * (60vh * 1920 / 1200));
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 32px, black calc(100% - 32px), transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 32, black calc(100% - 32px), transparent);
+}
+
+/* TYPOGRAPHY */
+.note-frequency-display {
+  font-size: 1.2rem;
+  font-family: monospace;
+  text-align: center;
+}
+
+/* FORM CONTROLS & BUTTONS */
+.button,
+select#waveform-select,
+input,
+textarea {
+  display: block;
+  margin: 0 auto 1rem;
+  width: min(
+    67vw,
+    calc((67vh * 1200 / 1920) - 3.33rem)
+  );
+  padding: var(--btn-padding);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  pointer-events: auto !important;
+  z-index: 2;
+  text-align: center;
+}
+
+.button {
+  color: #f0f0f0;
+  background: var(--accent);
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.25rem;
+}
+
+.button:hover {
+  background: var(--accent-hover);
+}
+
+.button:active {
+  background: var(--accent-active);
+}
+
+.button--permission {
+  background: var(--perm);
+}
+
+.button--permission:hover {
+  background: var(--perm-hover);
+}
+
+.button--permission:active {
+  background: var(--perm-active);
+}
+
+.button--start {
+  background: var(--start);
+}
+
+.button--start:hover {
+  background: var(--start-hover);
+}
+
+.button--start:active {
+  background: var(--start-active);
+}
+
+.button--stop {
+  background: var(--stop);
+}
+
+.button--stop:hover {
+  background: var(--stop-hover);
+}
+
+.button--stop:active {
+  background: var(--stop-active);
+}
+
+.permission-buttons .button {
+  z-index: 3;
+}
+
+select#waveform-select {
+  border: 2px solid #ccc;
+  color: #333;
+  margin-top: 0.9375rem;
+}
+
+select#waveform-select:focus {
+  border-color: var(--accent);
+  background: #f0f0f0;
+  outline: none;
+}
+
+/* OVERRIDES */
+[role="listbox"],
+[data-radix-popper-content-wrapper],
+[class*="dropdown"],
+[class*="popover"],
+[class*="menu"] {
+  left: auto !important;
+  right: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* UTILITIES */
+* {
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.scrollable {
+  -webkit-user-select: text;
+  user-select: text;
+  touch-action: auto;
+}
+
+.inputData {
+  display: block;
+  margin: 0 auto;
+  font-size: 1rem;
+  text-align: center;
+}

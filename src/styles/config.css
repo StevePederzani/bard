@@ -1,0 +1,155 @@
+/* General Styling */
+.menu {
+  position: fixed;
+  bottom: 0;
+  left: 5vw;
+  right: 5vw;
+  width: 90vw;
+  max-width: 90vw;
+  min-width: 340px;
+  height: 64vh;
+  max-height: 99%;
+  background-color: rgba(255, 255, 255, 0.89);
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translateY(100%);
+  overflow: hidden;
+  transition: transform 0.43s ease-in-out;
+  touch-action: pan-y;
+  z-index: 9997;
+}
+
+/* Menu Open State */
+.menu.open {
+  transform: translateY(0);
+}
+
+.menu .drag-handle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: ns-resize;
+  touch-action: pan-y;
+  z-index: 9998;
+}
+
+/* Main Menu Content */
+.menu-main {
+  position: relative;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  touch-action: pan-y;
+}
+
+.menu p {
+  color: rgba(43, 43, 43, 0.89);
+  font-size: 20px;
+  text-align: center;
+  padding: 8px;
+  word-wrap: break-word;
+}
+
+.app-buttons {
+  border: 1px solid rgba(0, 0, 0, 1);
+  z-index: 9999;
+}
+
+/* Scrollbar Customization */
+.menu-main::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .menu {
+    background-color: rgba(19, 19, 19, 0.89);
+  }
+
+  .menu .drag-handle-line {
+    background-color: rgba(123, 123, 123, 0.13);
+  }
+
+  .menu p {
+    color: rgba(242, 242, 242, 0.89);
+  }
+}
+
+/* Responsive Styling */
+@media (min-width: 1024px) {
+  .menu {
+    width: 420px;
+    height: 64vh;
+  }
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+  .menu {
+    width: 100vw;
+    height: 70vh; /* Increased height for better use of mobile space */
+    left: 0;
+    right: 0;
+    border-radius: 0; /* No rounded corners for better mobile fit */
+  }
+
+  .menu p {
+    font-size: 18px; /* Smaller text for mobile */
+  }
+
+  .menu .drag-handle {
+    height: 40px; /* Smaller drag handle for mobile */
+  }
+
+  .app-buttons {
+    font-size: 14px; /* Ensure buttons are readable on smaller screens */
+  }
+}
+
+/* Hiding Scrollbars */
+.hide-scrollbar {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.hide-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Motion Permission Overlay */
+.motion-permission-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  padding: 20px;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  z-index: 9999;
+}
