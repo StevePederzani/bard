@@ -1,3 +1,34 @@
+
+// Manually enter your config values here using data from bard.ozmium.org:
+const NEXT_PUBLIC_DOMAIN = 'bard.ozmium.org'
+const NEXT_PUBLIC_NAME = 'Bard'
+const NEXT_PUBLIC_SUBTITLE = 'The Theremini App'
+const NEXT_PUBLIC_DESCRIPTION = 'A theremin that uses your device to control audio and musical effects.'
+const NEXT_PUBLIC_ACTION = '♪ Make Some Noise ♪'
+const NEXT_PUBLIC_CATEGORY = 'Music'
+const NEXT_PUBLIC_TAGS = 'music,theremin,synth,sound,oz'
+const NEXT_PUBLIC_SCREENSHOT_COUNT = '3'
+const NEXT_PUBLIC_SCREENSHOT_SIZE = '1280x720'
+const NEXT_PUBLIC_HERO_SIZE = '1920x1080'
+const NEXT_PUBLIC_ICON_SIZES = '64,128,180,192,512'
+const NEXT_PUBLIC_THEME_COLOR = '#ef1dab'
+const NEXT_PUBLIC_CONTACT_EMAIL = 'hello@ozmium.org'
+const NEXT_PUBLIC_SOCIAL_FARCASTER = 'https://farcaster.xyz/~/channel/oz'
+const NEXT_PUBLIC_SOCIAL_FACEBOOK = 'https://facebook.com/ozonchain'
+const NEXT_PUBLIC_SOCIAL_X = '@ozonchain'
+const NEXT_PUBLIC_SOCIAL_DISCORD = 'https://discord.gg/2eRQCF4cCE '
+const NEXT_PUBLIC_FOUNDER_NAME = 'Steven M. Pederzani'
+const NEXT_PUBLIC_FOUNDER_ALTNAME = 'Steve Pederzani'
+const NEXT_PUBLIC_FOUNDER_IDENTIFIERS = 'pederzani,ozmium'
+const NEXT_PUBLIC_FOUNDER_SAMEAS = 'https://x.com/ozonchain,https://farcaster.xyz/ozmium.eth'
+const NEXT_PUBLIC_FOUNDER_ETH = '0xe5574554d6a4be5Ca39f22990492d756ebC4D6c3'
+const NEXT_PUBLIC_FOUNDER_DATE = '2025-05-04'
+const NEXT_PUBLIC_ERC20_CONTRACT = 'eip155:8453:0x148313DCDb7A7111EBEFA4871F6A7fef34833B07'
+const NEXT_PUBLIC_ERC20_TOKEN = 'Ozmium'
+const NEXT_PUBLIC_ERC20_SYMBOL = 'OZ'
+const NEXT_PUBLIC_ERC20_CHAIN = 'Base'
+const NEXT_PUBLIC_ERC20_CHAINID = '8453'
+
 export interface AppConfig {
   domain: string
   name: string
@@ -28,57 +59,47 @@ export interface AppConfig {
     chain: string
     chainId: string
   }
-  farcaster: {
-    header: string
-    payload: string
-    signature: string
-  }
 }
 
 export const siteConfig: AppConfig = {
-  domain: process.env.NEXT_PUBLIC_DOMAIN!,
-  name: process.env.NEXT_PUBLIC_NAME!,
-  subtitle: process.env.NEXT_PUBLIC_SUBTITLE!,
-  description: process.env.NEXT_PUBLIC_DESCRIPTION!,
-  action: process.env.NEXT_PUBLIC_ACTION!,
-  category: process.env.NEXT_PUBLIC_CATEGORY!,
-  tags: process.env.NEXT_PUBLIC_TAGS!.split(','),
-  screenshotCount: Number(process.env.NEXT_PUBLIC_SCREENSHOT_COUNT!),
-  screenshotSize: process.env.NEXT_PUBLIC_SCREENSHOT_SIZE!,
-  heroSize: process.env.NEXT_PUBLIC_HERO_SIZE!,
-  iconSizes: process.env.NEXT_PUBLIC_ICON_SIZES!.split(',').map(Number),
-  themeColor: process.env.NEXT_PUBLIC_THEME_COLOR!.replace(/"/g, ''),
-  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL!,
+  domain: NEXT_PUBLIC_DOMAIN,
+  name: NEXT_PUBLIC_NAME,
+  subtitle: NEXT_PUBLIC_SUBTITLE,
+  description: NEXT_PUBLIC_DESCRIPTION,
+  action: NEXT_PUBLIC_ACTION,
+  category: NEXT_PUBLIC_CATEGORY,
+  tags: NEXT_PUBLIC_TAGS.split(','),
+  screenshotCount: Number(NEXT_PUBLIC_SCREENSHOT_COUNT),
+  screenshotSize: NEXT_PUBLIC_SCREENSHOT_SIZE,
+  heroSize: NEXT_PUBLIC_HERO_SIZE,
+  iconSizes: NEXT_PUBLIC_ICON_SIZES.split(',').map(Number),
+  themeColor: NEXT_PUBLIC_THEME_COLOR.replace(/"/g, ''),
+  contactEmail: NEXT_PUBLIC_CONTACT_EMAIL,
   socialLinks: {
-    farcaster: process.env.NEXT_PUBLIC_SOCIAL_FARCASTER!,
-    facebook: process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK!,
-    x: `https://x.com/${process.env.NEXT_PUBLIC_SOCIAL_X?.replace(/^@/, '')}`,
-    discord: process.env.NEXT_PUBLIC_SOCIAL_DISCORD!,
+    farcaster: NEXT_PUBLIC_SOCIAL_FARCASTER,
+    facebook: NEXT_PUBLIC_SOCIAL_FACEBOOK,
+    x: `https://x.com/${NEXT_PUBLIC_SOCIAL_X.replace(/^@/, '')}`,
+    discord: NEXT_PUBLIC_SOCIAL_DISCORD,
   },
   founder: {
-    name: process.env.NEXT_PUBLIC_FOUNDER_NAME!,
-    alternateName: process.env.NEXT_PUBLIC_FOUNDER_ALTNAME!,
-    identifiers: process.env.NEXT_PUBLIC_FOUNDER_IDENTIFIERS!.split(','),
-    sameAs: process.env.NEXT_PUBLIC_FOUNDER_SAMEAS!.split(','),
-    ethereumAddress: process.env.NEXT_PUBLIC_FOUNDER_ETH!,
-    foundingDate: process.env.NEXT_PUBLIC_FOUNDER_DATE!,
+    name: NEXT_PUBLIC_FOUNDER_NAME,
+    alternateName: NEXT_PUBLIC_FOUNDER_ALTNAME,
+    identifiers: NEXT_PUBLIC_FOUNDER_IDENTIFIERS.split(','),
+    sameAs: NEXT_PUBLIC_FOUNDER_SAMEAS.split(','),
+    ethereumAddress: NEXT_PUBLIC_FOUNDER_ETH,
+    foundingDate: NEXT_PUBLIC_FOUNDER_DATE,
   },
   erc20: {
-    contract: process.env.NEXT_PUBLIC_ERC20_CONTRACT!,
-    token: process.env.NEXT_PUBLIC_ERC20_TOKEN!,
-    symbol: process.env.NEXT_PUBLIC_ERC20_SYMBOL!,
-    chain: process.env.NEXT_PUBLIC_ERC20_CHAIN!,
-    chainId: process.env.NEXT_PUBLIC_ERC20_CHAINID!,
-  },
-  farcaster: {
-    header: process.env.NEXT_PUBLIC_FARCASTER_HEADER!,
-    payload: process.env.NEXT_PUBLIC_FARCASTER_PAYLOAD!,
-    signature: process.env.NEXT_PUBLIC_FARCASTER_SIGNATURE!,
-  },
+    contract: NEXT_PUBLIC_ERC20_CONTRACT,
+    token: NEXT_PUBLIC_ERC20_TOKEN,
+    symbol: NEXT_PUBLIC_ERC20_SYMBOL,
+    chain: NEXT_PUBLIC_ERC20_CHAIN,
+    chainId: NEXT_PUBLIC_ERC20_CHAINID,
+  }
 }
 
 const baseUrl = `https://${siteConfig.domain}`
-const assetUrl = (path: string) => `${baseUrl}/assets/${path}`
+const assetUrl = (path: string) => `${baseUrl}/${path}`
 
 const generateScreenshots = (count: number) =>
   Array.from({ length: count }, (_, i) => assetUrl(`screenshot_${i + 1}.png`))
@@ -230,32 +251,6 @@ export const createAppConfig = () => {
         foundingDate: siteConfig.founder.foundingDate,
       },
     },
-
-    farcaster: {
-      accountAssociation: siteConfig.farcaster,
-      frame: {
-        version: '1',
-        name: siteConfig.name,
-        subtitle: siteConfig.subtitle,
-        tagline: `${siteConfig.name}: ${siteConfig.subtitle}`,
-        ogTitle: `${siteConfig.name}: ${siteConfig.subtitle}`,
-        tags: siteConfig.tags,
-        description: siteConfig.description,
-        canonicalDomain: siteConfig.domain,
-        primaryCategory: siteConfig.category,
-        homeUrl: baseUrl,
-        webhookUrl: `${baseUrl}/webhook`,
-        castShareUrl: `${baseUrl}/share`,
-        requiredChains: ['eip155:8453'],
-        iconUrl: icons[0].src,
-        ogImageUrl: assetUrl('1280x630.png'),
-        heroImageUrl: assetUrl(`${siteConfig.heroSize}.webp`),
-        screenshotUrls: screenshots,
-        splashImageUrl: assetUrl('200.png'),
-        splashBackgroundColor: siteConfig.themeColor,
-      },
-    },
-
     embed: {
       version: 'next',
       imageUrl: assetUrl(`${siteConfig.heroSize}.webp`),
@@ -273,4 +268,4 @@ export const createAppConfig = () => {
   }
 }
 
-export const { meta, structuredData, farcaster, embed } = createAppConfig()
+export const { meta, structuredData, embed } = createAppConfig()

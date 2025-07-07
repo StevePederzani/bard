@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import { meta, structuredData, embed } from '@/lib/site'
+import { meta, structuredData, embed } from '@/lib/app'
 import { Providers } from './config'
 
 import '@/styles/globals.css'

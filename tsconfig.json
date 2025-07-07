@@ -28,22 +28,16 @@
         "./src/*"
       ]
     },
-    "types": [
-      "node"
-    ],
     "typeRoots": [
-      "src/types",
       "./node_modules/@types"
     ]
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    ".open-next/types/**/*.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "src/tests/**/*.ts"
-, "src/tests/clanker,cjs", "src/tests/deploy.mjs", "src/tests/build.mjs"  ],
+  ],
   "exclude": [
     "node_modules"
   ]

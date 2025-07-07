@@ -1,7 +1,7 @@
 'use client'
 
 import { JSX, useEffect } from 'react'
-import { sdk } from '@farcaster/frame-sdk'
+import { sdk } from '@farcaster/miniapp-sdk'
 import Theremin from './app'
 
 export default function App(): JSX.Element {
