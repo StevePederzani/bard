@@ -6,7 +6,6 @@ import { Providers } from './config'
 
 import '@/styles/globals.css'
 import '@coinbase/onchainkit/styles.css'
-// import Vibe from '@/components/Vibe'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
@@ -68,10 +67,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="frame-wrapper">
             <div className="frame" />
             <div className="content">
-              {/* Fix this later, it's just visual unrelated to CBW cleanup. */}
-              {/* <div className="vibe-bg">
-                <Vibe />
-              </div> */}
               {children}
             </div>
           </div>

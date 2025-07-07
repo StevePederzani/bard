@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     'localhost:3000',
     'bard.ozmium.org',
     'barcaster.pages.dev',
-    'tongue-say-pichunter-rarely.trycloudflare.com',
+    'test.ozmium.org',
   ],
   reactStrictMode: true,
   async redirects() {
