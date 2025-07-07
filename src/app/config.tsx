@@ -132,7 +132,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
                 <button type="button" className="swap-button" onClick={handleSwap}>
                   <span className="sr-only">Swap ETH to OZ</span>
                   <Image
-                  src="/assets/ozmium.gif"
+                  src="/ozmium.gif"
                   alt="Swap to Ozmium"
                   className="swap-image"
                   width={96}
