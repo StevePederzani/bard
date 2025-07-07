@@ -155,10 +155,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
                   }
                 >toss a coin<br/>to your builder<br/>o wallet of plenty</button>
 
-                <button type="button" className="button button--permission" onClick={()=>sdk.actions.addMiniApp()}>
-                Add Mini-App
-                </button>
-
                 <button type="button" className="button button--permission" onClick={async () => {
                 await sdk.actions.composeCast({
                   text: [
