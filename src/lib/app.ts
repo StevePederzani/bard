@@ -253,7 +253,7 @@ export const createAppConfig = () => {
     },
     embed: {
       version: 'next',
-      imageUrl: assetUrl(`${siteConfig.heroSize}.webp`),
+      imageUrl: assetUrl(`480x320.webp`),
       button: {
         title: siteConfig.action,
         action: {

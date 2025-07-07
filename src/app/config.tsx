@@ -8,7 +8,7 @@ import { OnchainKitProvider } from '@coinbase/onchainkit'
 import { MiniKitProvider, usePrimaryButton } from '@coinbase/onchainkit/minikit'
 import { farcasterFrame as miniAppConnector } from '@farcaster/miniapp-wagmi-connector'
 import { coinbaseWallet, injected } from 'wagmi/connectors'
-import { base } from 'wagmi/chains'
+import { base } from '@wagmi/chains'
 import { meta } from '../lib/app'
 import sdk from '@farcaster/miniapp-sdk'
 

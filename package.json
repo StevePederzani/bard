@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "@coinbase/onchainkit": "latest",
+    "@farcaster/mini-app-solana": "latest",
     "@farcaster/miniapp-sdk": "latest",
     "@farcaster/miniapp-wagmi-connector": "latest",
-    "@farcaster/mini-app-solana": "latest",
     "@farcaster/quick-auth": "latest",
     "@opennextjs/cloudflare": "latest",
+    "@wagmi/chains": "^1.8.0",
     "dotenv": "latest",
     "next": "latest",
     "next-auth": "latest",
