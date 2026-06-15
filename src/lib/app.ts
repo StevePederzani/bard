@@ -28,6 +28,7 @@ const NEXT_PUBLIC_ERC20_TOKEN = 'Ozmium'
 const NEXT_PUBLIC_ERC20_SYMBOL = 'OZ'
 const NEXT_PUBLIC_ERC20_CHAIN = 'Base'
 const NEXT_PUBLIC_ERC20_CHAINID = '8453'
+const NEXT_PUBLIC_BASE_APP_ID = '696d6788f22fe462e74c1421'
 
 export interface AppConfig {
   domain: string
@@ -95,7 +96,8 @@ export const siteConfig: AppConfig = {
     symbol: NEXT_PUBLIC_ERC20_SYMBOL,
     chain: NEXT_PUBLIC_ERC20_CHAIN,
     chainId: NEXT_PUBLIC_ERC20_CHAINID,
-  }
+  },
+  baseApp: NEXT_PUBLIC_BASE_APP_ID
 }
 
 const baseUrl = `https://${siteConfig.domain}`
