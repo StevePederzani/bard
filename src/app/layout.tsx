@@ -59,6 +59,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="web3:token:name" content={structuredData.name} />
         <meta name="web3:token:symbol" content={structuredData.erc20.tickerSymbol} />
 
+        <meta name="base:app_id" content={structuredData.baseApp} />
+
         <meta name="fc:frame" content={JSON.stringify(embed)} />
         <meta name="description" content={og.description} />
       </head>
