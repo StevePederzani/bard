@@ -60,6 +60,7 @@ export interface AppConfig {
     chain: string
     chainId: string
   }
+  baseApp: string
 }
 
 export const siteConfig: AppConfig = {
